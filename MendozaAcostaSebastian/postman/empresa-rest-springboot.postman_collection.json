@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "838b7434-8c47-4629-9cac-4034a3c8eb92",
+		"name": "empresa-rest-springboot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19419657"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "POST login Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"SebsMendoza\",\r\n    \"password\": \"sebs1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"usuarios",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST login USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"SandOr\",\r\n    \"password\": \"sand1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"usuarios",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Me (auth)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjNTMwNjJlNC0zMWVhLTRmNWUtYTk5ZC0zNmMyMjhlZDAxYTMiLCJleHAiOjE2Nzc1MzM3MDgsImlhdCI6MTY3NzUzMDEwOCwibm9tYnJlIjoiU2FuZHJhIE9ydGVnYSIsInJvbCI6IlVTRVIiLCJ1c2VybmFtZSI6IlNhbmRPciJ9.NXehu4l8E8E1b5w-BPjqhJMpqywEAyP4XyXD2MHbAyUMAUZUM-vujDCXtRfBoJp39x4x9Fi27mIGg-b0C46iXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"usuarios",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"create\",\r\n    \"email\": \"create@create.com\",\r\n    \"username\": \"create\",\r\n    \"password\": \"create1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"usuarios",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Me Update Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjNTMwNjJlNC0zMWVhLTRmNWUtYTk5ZC0zNmMyMjhlZDAxYTMiLCJleHAiOjE2Nzc1MzcwNjUsImlhdCI6MTY3NzUzMzQ2NSwibm9tYnJlIjoiU2FuZHJhIE9ydGVnYSIsInJvbCI6IlVTRVIiLCJ1c2VybmFtZSI6IlNhbmRPciJ9.f6Max7XJY2zjTRQoPJ3olTaTQJH_9exHwRs4MTwxKc6B_Trn1rYIFsnaVmeZRB8gXPz-7KIrRX5GLv_7bozRDg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Sandra Ortega\",\r\n    \"email\": \"san@san.com\",\r\n    \"username\": \"SanSan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"usuarios",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Me Avatar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjNTMwNjJlNC0zMWVhLTRmNWUtYTk5ZC0zNmMyMjhlZDAxYTMiLCJleHAiOjE2Nzc1Mzc1NjcsImlhdCI6MTY3NzUzMzk2Nywibm9tYnJlIjoiU2FuZHJhIE9ydGVnYSIsInJvbCI6IlVTRVIiLCJ1c2VybmFtZSI6IlNhblNhbiJ9.kZSW7fIbtuOPBWK611VKdoCu2Sl9U0SbtUpBELysHjkr1LaiRI11rr0tc_hSXpUvVQ1ROX5TQF8kEeo62_U0Bg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/landi/OneDrive/Documentos/DAM/DAM22_23/Ejercicios_Mix/Empresa-Rest-SpringBoot/postman/nueva-foto.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"usuarios",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL Usuarios (admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiMzlhMmZkMi1mN2Q3LTQwNWQtYjczYy1iNjhhOGRlZGJjZGYiLCJleHAiOjE2Nzc1Mzc3MDgsImlhdCI6MTY3NzUzNDEwOCwibm9tYnJlIjoiU2ViYXN0aWFuIE1lbmRvemEiLCJyb2wiOiJBRE1JTiIsInVzZXJuYW1lIjoiU2Vic01lbmRvemEifQ.0hT1E6ivsaW-LcCLviitpg6nB0hJE35E1bC5UG5za09CqFvBchAYAO_dYPM1jV1Kilp3PfT988TUl_JBa3IxrA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/usuarios/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"usuarios",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Storage",
+			"item": [
+				{
+					"name": "POST Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/landi/OneDrive/Documentos/DAM/DAM22_23/Ejercicios_Mix/Empresa-Rest-SpringBoot/postman/nueva-foto.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/storage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"storage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET File",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/storage/8351d85b-a850-4610-9edb-7aff6d96f703.jpeg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"storage",
+								"8351d85b-a850-4610-9edb-7aff6d96f703.jpeg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE File",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/storage/8351d85b-a850-4610-9edb-7aff6d96f703.jpeg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"storage",
+								"8351d85b-a850-4610-9edb-7aff6d96f703.jpeg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empleados",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/empleados/70759a24-c252-4e0c-b613-9414a8d13439",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"empleados",
+								"70759a24-c252-4e0c-b613-9414a8d13439"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND By",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/empleados/find?nombre=Celine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"empleados",
+								"find"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Celine"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Amelia Diez\",\r\n    \"email\": \"am@di.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Maria Amelia\",\r\n    \"email\": \"mari@ameli.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6969/api/empleados/b1c3eb72-0514-4a51-87e5-8b80ab5e087e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"empleados",
+								"b1c3eb72-0514-4a51-87e5-8b80ab5e087e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6969/api/empleados/e23572b0-3faa-4937-90de-820eb488d893",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6969",
+							"path": [
+								"api",
+								"empleados",
+								"e23572b0-3faa-4937-90de-820eb488d893"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
