@@ -12,13 +12,3 @@ fun UsuarioRegisterDTO.validarCreate(): UsuarioRegisterDTO {
 
     return this
 }
-
-
-fun UsuarioLoginDTO.validarLogin(): UsuarioLoginDTO {
-    if (this.username.isBlank())
-        throw UsuarioBadRequestException("El username no puede ser nulo.")
-    if(this.password.isBlank())
-        throw UsuarioBadRequestException("La contraseña no puede ser nula.")
-
-    return this
-}
