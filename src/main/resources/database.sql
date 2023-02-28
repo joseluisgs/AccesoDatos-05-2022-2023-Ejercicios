@@ -1,0 +1,31 @@
+DROP TABLE IF EXISTS empleados;
+DROP TABLE IF EXISTS departamentos;
+DROP TABLE IF EXISTS usaurios;
+
+CREATE TABLE IF NOT EXISTS DEPARTAMENTOS
+(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nombre TEXT NOT NULL,
+    presupuesto DOUBLE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS EMPLEADOS
+(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nombre TEXT NOT NULL,
+    email TEXT NOT NULL,
+    avatar TEXT NOT NULL,
+    departamento_id BIGINT REFERENCES departamentos (id)
+);
+
+CREATE TABLE IF NOT EXISTS USUARIOS
+(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    role TEXT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO USUARIOS (id, username, password, role) VALUES (0, 'alejandro', '$2a$12$1MrMVIPzYTGSiQm39ePfCuvZyNBF5GYieX8DYzIa.4tndwQ2XgD3C', 'ADMIN');
+INSERT INTO USUARIOS (id, username, password, role) VALUES (1, 'mireya', '$2a$12$I9nMkDlA7yxs2AdpBu6EjOdF0vRJ5XXa2Fz7jJijVRcC/o1aQAn6m', 'USER');
