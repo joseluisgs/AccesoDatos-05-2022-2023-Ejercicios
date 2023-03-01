@@ -1,0 +1,1180 @@
+{
+	"info": {
+		"_postman_id": "57293559-6ae2-4e60-90eb-cfc7b7cb0944",
+		"name": "Ejercicio SpringBoot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"loli\",\r\n    \"password\": \"loli1707\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register empleado",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"JUAN\",\r\n    \"email\": \"juanelcaballo@gmail.com\",\r\n    \"password\": \"JUANJUAN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register BAD REQUEST",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"uwu\",\r\n    \"email\": \"uwu@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find all users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM1NTIzLCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.4USiclIYSaX0uTrVzMSu1npO3CYj7QVfb84fMoTyKV_XW_Fm9--6YgTumh-dNRE_a9NCbdMXsoELfurbZQEKWQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM1NTIzLCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.4USiclIYSaX0uTrVzMSu1npO3CYj7QVfb84fMoTyKV_XW_Fm9--6YgTumh-dNRE_a9NCbdMXsoELfurbZQEKWQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/users/93a98d69-6da6-48a7-b34f-05b596ea83aa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"users",
+								"93a98d69-6da6-48a7-b34f-05b596ea83aa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find user by id BAD REQUEST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM1NTIzLCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.4USiclIYSaX0uTrVzMSu1npO3CYj7QVfb84fMoTyKV_XW_Fm9--6YgTumh-dNRE_a9NCbdMXsoELfurbZQEKWQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/users/qwert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"users",
+								"qwert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find user by id NOT FOUND",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM1NTIzLCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.4USiclIYSaX0uTrVzMSu1npO3CYj7QVfb84fMoTyKV_XW_Fm9--6YgTumh-dNRE_a9NCbdMXsoELfurbZQEKWQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/users/93a98d69-6da6-48a7-b34f-05b596ea83cc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"users",
+								"93a98d69-6da6-48a7-b34f-05b596ea83cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTIyMDc5LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.LF88NYduU9TjIHeGOSLCRAArWC1xTEvO8mO4F6-e_ZQdfq06qbxgfWW6tycLhgrncBDRQhbRs2GYNOMyoZd6LQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/users/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/users/93a98d69-6da6-48a7-b34f-05b596ea0000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"users",
+								"93a98d69-6da6-48a7-b34f-05b596ea0000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user NOT FOUND",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/users/93a98d69-6da6-48a7-b34f-05b596ea83cc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"users",
+								"93a98d69-6da6-48a7-b34f-05b596ea83cc"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "empleados",
+			"item": [
+				{
+					"name": "find all empleados",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM5OTY2LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.T5jkQdGK1vOA9_fPqo6vHdiCLsRWYPkkWH1mqCqqOn7xTG73gB8wHZmbIPT_uiBmhhGgXDKOE2eovxV0WuK91Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find empleado by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTE3MDE4LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Shv_cm0XlsUameD__b4p46Av231HdB3bD2tR-mq_fgRGBM5uCQVF9HRMxM5zDwF2L-TD-o3Z9f1a89OCK5O4Uw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/empleados/93a98d69-6da6-48a7-b34f-05b596ea0001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"empleados",
+								"93a98d69-6da6-48a7-b34f-05b596ea0001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find empleado by id BAD REQUEST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1Iiwicm9sZSI6IkVNUExFQURPIiwiZXhwIjoxNjc3NDM2ODA4LCJlbWFpbCI6Imp1YW5lbGNhYmFsbG9AZ21haWwuY29tIiwidXNlcm5hbWUiOiJKVUFOIn0.FY41XcX-U51fGFyWIJlXfTtcP93_rsDU_sN5QIJM2B_nBC_VTSolTbkmBrFH0Wh3nrGV5J5DbiY7APiz3P9OnA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/empleados/awitadecoco",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"empleados",
+								"awitadecoco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find empleado by id NOT FOUND",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1Iiwicm9sZSI6IkVNUExFQURPIiwiZXhwIjoxNjc3NDM2ODA4LCJlbWFpbCI6Imp1YW5lbGNhYmFsbG9AZ21haWwuY29tIiwidXNlcm5hbWUiOiJKVUFOIn0.FY41XcX-U51fGFyWIJlXfTtcP93_rsDU_sN5QIJM2B_nBC_VTSolTbkmBrFH0Wh3nrGV5J5DbiY7APiz3P9OnA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/empleados/93a98d69-6da6-48a7-b34f-05b596ea0123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"empleados",
+								"93a98d69-6da6-48a7-b34f-05b596ea0123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create empleado BAD REQUEST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1Iiwicm9sZSI6IkVNUExFQURPIiwiZXhwIjoxNjc3NDM2ODA4LCJlbWFpbCI6Imp1YW5lbGNhYmFsbG9AZ21haWwuY29tIiwidXNlcm5hbWUiOiJKVUFOIn0.FY41XcX-U51fGFyWIJlXfTtcP93_rsDU_sN5QIJM2B_nBC_VTSolTbkmBrFH0Wh3nrGV5J5DbiY7APiz3P9OnA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create empleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"93a98d69-6da6-48a7-b34f-05b596ea1928\",\r\n    \"nombre\": \"uwu\",\r\n    \"email\": \"uwu@uwu.com\",\r\n    \"avatar\": \"\",\r\n    \"departamentoId\": \"93a98d69-6da6-48a7-b34f-05b596ea0004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update avatar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTIyMDc5LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.LF88NYduU9TjIHeGOSLCRAArWC1xTEvO8mO4F6-e_ZQdfq06qbxgfWW6tycLhgrncBDRQhbRs2GYNOMyoZd6LQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/User/IdeaProjects/EjercicioSpring/postman/gigachad.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/empleados/avatar/93a98d69-6da6-48a7-b34f-05b596ea0001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"empleados",
+								"avatar",
+								"93a98d69-6da6-48a7-b34f-05b596ea0001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete empleado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/empleados/93a98d69-6da6-48a7-b34f-05b596ea1928",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"empleados",
+								"93a98d69-6da6-48a7-b34f-05b596ea1928"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete empleado NOT FOUND",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/empleados/93a98d69-6da6-48a7-b34f-05b596ea1771",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"empleados",
+								"93a98d69-6da6-48a7-b34f-05b596ea1771"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete empleado BAD REQUEST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/empleados/QUIEROUNCOLACAO",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"empleados",
+								"QUIEROUNCOLACAO"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "departamentos",
+			"item": [
+				{
+					"name": "find all departamentos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM1NTIzLCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.4USiclIYSaX0uTrVzMSu1npO3CYj7QVfb84fMoTyKV_XW_Fm9--6YgTumh-dNRE_a9NCbdMXsoELfurbZQEKWQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/departamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find departamento by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM1NTIzLCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.4USiclIYSaX0uTrVzMSu1npO3CYj7QVfb84fMoTyKV_XW_Fm9--6YgTumh-dNRE_a9NCbdMXsoELfurbZQEKWQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/departamentos/93a98d69-6da6-48a7-b34f-05b596ea0003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"departamentos",
+								"93a98d69-6da6-48a7-b34f-05b596ea0003"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find departamento by id BAD REQUEST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM4MjY3LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.-qFuQLzzPRWRF0KBu3_4kCqYo7FVjTvPIBLvU8IxIqTxCfZc8EJmqS4XaxWV-OcB5GNMahetLtESqTyngA4R4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/departamentos/qwerty",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"departamentos",
+								"qwerty"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find departamento by id NOT FOUND",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM4MjY3LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.-qFuQLzzPRWRF0KBu3_4kCqYo7FVjTvPIBLvU8IxIqTxCfZc8EJmqS4XaxWV-OcB5GNMahetLtESqTyngA4R4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/departamentos/93a98d69-6da6-48a7-b34f-05b596ea9999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"departamentos",
+								"93a98d69-6da6-48a7-b34f-05b596ea9999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create departamento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM4MjY3LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.-qFuQLzzPRWRF0KBu3_4kCqYo7FVjTvPIBLvU8IxIqTxCfZc8EJmqS4XaxWV-OcB5GNMahetLtESqTyngA4R4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"93a98d69-6da6-48a7-b34f-05b596ea8888\",\r\n    \"nombre\": \"departamento de esclavismo\",\r\n    \"presupuesto\": 6969.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/departamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create departamento BAD REQUEST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDM4MjY3LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.-qFuQLzzPRWRF0KBu3_4kCqYo7FVjTvPIBLvU8IxIqTxCfZc8EJmqS4XaxWV-OcB5GNMahetLtESqTyngA4R4Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"93a98d69-6da6-48a7-b34f-05b596ea8888\",\r\n    \"nombre\": \"departamento de esclavismo\",\r\n    \"presupuesto\": -6969.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/departamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete departamento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/departamentos/93a98d69-6da6-48a7-b34f-05b596ea8888",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"departamentos",
+								"93a98d69-6da6-48a7-b34f-05b596ea8888"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete departamento NOT FOUND",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/departamentos/93a98d69-6da6-48a7-b34f-05b596ea7777",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"departamentos",
+								"93a98d69-6da6-48a7-b34f-05b596ea7777"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete departamento BAD REQUEST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NDUxMDU1LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Q95pMF4hVTNTW-2eGdvvl_2FvP1nE9zx0iOnaf_U_1XspRiJFSXMzXpzWR71dBUUilhcqKstO24Qv9E1EWNjdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/departamentos/nadacomounasbuenaspringles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"departamentos",
+								"nadacomounasbuenaspringles"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "storage",
+			"item": [
+				{
+					"name": "find NOT FOUND",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTE3MDE4LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Shv_cm0XlsUameD__b4p46Av231HdB3bD2tR-mq_fgRGBM5uCQVF9HRMxM5zDwF2L-TD-o3Z9f1a89OCK5O4Uw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/storage/gigachad.png",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"storage",
+								"gigachad.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTIyMDc5LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.LF88NYduU9TjIHeGOSLCRAArWC1xTEvO8mO4F6-e_ZQdfq06qbxgfWW6tycLhgrncBDRQhbRs2GYNOMyoZd6LQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/User/IdeaProjects/EjercicioSpring/postman/gigachad.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/storage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"storage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete NOT FOUND",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTIwOTIxLCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.XLcutDR9o2QQo9FHwh73KijqK6dRKUvbOd_aFNLgRkzfqquaMa86dTCVZeGeSiu8qSdS0SxM5Ca9stYoLWcDPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/storage/gigachad.png",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"storage",
+								"gigachad.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find image (cambiar url al nombre de una imagen que exista)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NTE3MDE4LCJlbWFpbCI6ImxvbGlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJsb2xpIn0.Shv_cm0XlsUameD__b4p46Av231HdB3bD2tR-mq_fgRGBM5uCQVF9HRMxM5zDwF2L-TD-o3Z9f1a89OCK5O4Uw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ejercicioSpring/storage/gigachad_1677519375711.jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ejercicioSpring",
+								"storage",
+								"gigachad_1677519375711.jpg"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
