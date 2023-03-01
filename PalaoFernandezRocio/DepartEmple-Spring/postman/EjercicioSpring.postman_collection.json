@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "a547b817-6ba3-4806-bbc3-a0343ecadce3",
+		"name": "EjercicioSpring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25252410"
+	},
+	"item": [
+		{
+			"name": "Registro Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\":\"rocio@gmail.com\",\r\n   \"username\":\"rochiio\",\r\n   \"rol\":[\"ADMIN\"], \r\n   \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6963/usuarios/register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6963",
+					"path": [
+						"usuarios",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Salvar Imagen",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjc3NTAzODU3LCJpYXQiOjE2Nzc1MDAyNTcsInJvbCI6IltBRE1JTl0iLCJ1c2VybmFtZSI6InJvY2hpaW8ifQ.eCmEz0VDVxRt9EwGjpnglkj_jNkgpsPshKFI-lZXFh4HBcBkE38zLMX8eKKuKngjx64hAAhHnkB_sZqAQH_bsw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/rpala/Pictures/Camera Roll/4ab30e44260d46623f206b855095ed55.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:6963/storage",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6963",
+					"path": [
+						"storage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Imagen",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjc3NTAzNDgzLCJpYXQiOjE2Nzc0OTk4ODMsInJvbCI6IltBRE1JTl0iLCJ1c2VybmFtZSI6InJvY2hpaW8ifQ.0THtO5KWcBkqP5gRlU-IoqU61JnhbeF43OdKwKatYL4pmx_rNZOgfpc5pbncYpbtziPrISyPOjl4cPex2MQ-Wg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6963/storage/rochiio.jpg",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6963",
+					"path": [
+						"storage",
+						"rochiio.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6963/usuarios",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6963",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"rochiio\",\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6963/usuarios/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6963",
+					"path": [
+						"usuarios",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario Me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNjc3NTA0MjA0LCJpYXQiOjE2Nzc1MDA2MDQsInJvbCI6IltBRE1JTl0iLCJ1c2VybmFtZSI6InJvY2hpaW8ifQ.gvblfCWlmp9sC9fU_aQD-jDAn487APcVhNb0G5h8MPHULGXYgnQh_7fgjP7rEyIUMrWq1dJVU2G2CylA-RRHjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6963/usuarios/me",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6963",
+					"path": [
+						"usuarios",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Departamentos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6963/departamentos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6963",
+					"path": [
+						"departamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Departamento Error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nombre\":\"\",\r\n   \"presupuesto\":-200.0 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6963/departamentos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6963",
+					"path": [
+						"departamentos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
