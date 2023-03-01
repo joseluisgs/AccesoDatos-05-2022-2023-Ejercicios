@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "32475ddb-6cc8-400e-acfd-c46ef54b14b8",
+		"name": "Storage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25247177"
+	},
+	"item": [
+		{
+			"name": "SaveFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/danii/Desktop/tenistas-rest-springboot-2022-2023-main/postman/nuevoavatar.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:6969/storage",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"storage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/storage/3760dd18-ac6e-48f9-b165-03eeb5f9d3d5.jpg",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"storage",
+						"3760dd18-ac6e-48f9-b165-03eeb5f9d3d5.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteFile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzY2QwMmE4NS1iMjdjLTQ2YjgtYjUyOS05MDQxODM1MmU2MTkiLCJyb2xlcyI6IltBRE1JTl0iLCJuYW1lIjoiRGFuaWVsIiwiZXhwIjoxNjc3NjU1Mzk3LCJpYXQiOjE2Nzc2NTE3OTcsInVzZXJuYW1lIjoiS2Fzc2l1czEwIn0.Nx03A-zzQfENlYbFSbmgI7cfa5scxoeg9kdoen06aKWpecl2wOGVU8IUZerenX0JtqLni83fZ0Plhr7QIYs0Fg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/storage/3760dd18-ac6e-48f9-b165-03eeb5f9d3d5.jpg",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"storage",
+						"3760dd18-ac6e-48f9-b165-03eeb5f9d3d5.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
