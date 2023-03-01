@@ -1,0 +1,702 @@
+{
+	"info": {
+		"_postman_id": "bbafb62a-d102-4597-8b9e-1829fcca4606",
+		"name": "RepasoAPISpring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25247215"
+	},
+	"item": [
+		{
+			"name": "https://localhost:6969/repaso/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NjA5MDY0LCJ1c2VybmFtZSI6ImFsZWphbmRybyJ9.Ik11UjOBYj8UbYg14SR6f5HTyr1qDH_Fp5JhJG4G85Dom32FrByLpmcoqhKiWh1nsJE9AOJrkI8tbVrDjNy4FA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"alejandro\",\r\n    \"password\": \"alejandro1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/me",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NjA5MDY0LCJ1c2VybmFtZSI6ImFsZWphbmRybyJ9.Ik11UjOBYj8UbYg14SR6f5HTyr1qDH_Fp5JhJG4G85Dom32FrByLpmcoqhKiWh1nsJE9AOJrkI8tbVrDjNy4FA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"alejandro\",\r\n    \"password\": \"alejandro1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/me",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NjA5MDY0LCJ1c2VybmFtZSI6ImFsZWphbmRybyJ9.Ik11UjOBYj8UbYg14SR6f5HTyr1qDH_Fp5JhJG4G85Dom32FrByLpmcoqhKiWh1nsJE9AOJrkI8tbVrDjNy4FA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"alejandro\",\r\n    \"password\": \"alejandro1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/departamentos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NjA5MDY0LCJ1c2VybmFtZSI6ImFsZWphbmRybyJ9.Ik11UjOBYj8UbYg14SR6f5HTyr1qDH_Fp5JhJG4G85Dom32FrByLpmcoqhKiWh1nsJE9AOJrkI8tbVrDjNy4FA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Ventas\",\r\n    \"presupuesto\": 83429.93\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/departamentos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"departamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/departamentos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NjA5MDY0LCJ1c2VybmFtZSI6ImFsZWphbmRybyJ9.Ik11UjOBYj8UbYg14SR6f5HTyr1qDH_Fp5JhJG4G85Dom32FrByLpmcoqhKiWh1nsJE9AOJrkI8tbVrDjNy4FA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Ventas\",\r\n    \"presupuesto\": 83429.93\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/departamentos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"departamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/departamentos/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NjA5MDY0LCJ1c2VybmFtZSI6ImFsZWphbmRybyJ9.Ik11UjOBYj8UbYg14SR6f5HTyr1qDH_Fp5JhJG4G85Dom32FrByLpmcoqhKiWh1nsJE9AOJrkI8tbVrDjNy4FA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Ventas\",\r\n    \"presupuesto\": 83429.93\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/departamentos/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"departamentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/empleados",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NjA5NjQ5LCJ1c2VybmFtZSI6ImFsZWphbmRybyJ9.naE-sONKHysDbBcVPT-pbOb3KeEdrl3m3Nc6UwjAzCX0_xUtxccY0SyQ-lXfOy2LBztxMr39I5WBMWwbnDQYyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose Juan\",\r\n    \"email\": \"jose@juan.com\",\r\n    \"avatar\": \"https://cdn-icons-png.flaticon.com/512/147/147144.png\",\r\n    \"departamento_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/empleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/empleados",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NjA5NjQ5LCJ1c2VybmFtZSI6ImFsZWphbmRybyJ9.naE-sONKHysDbBcVPT-pbOb3KeEdrl3m3Nc6UwjAzCX0_xUtxccY0SyQ-lXfOy2LBztxMr39I5WBMWwbnDQYyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose Juan\",\r\n    \"email\": \"jose@juan.com\",\r\n    \"avatar\": \"https://cdn-icons-png.flaticon.com/512/147/147144.png\",\r\n    \"departamento_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/empleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/empleados/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NjA5NjQ5LCJ1c2VybmFtZSI6ImFsZWphbmRybyJ9.naE-sONKHysDbBcVPT-pbOb3KeEdrl3m3Nc6UwjAzCX0_xUtxccY0SyQ-lXfOy2LBztxMr39I5WBMWwbnDQYyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose Juan\",\r\n    \"email\": \"jose@juan.com\",\r\n    \"avatar\": \"https://cdn-icons-png.flaticon.com/512/147/147144.png\",\r\n    \"departamento_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/empleados/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"empleados",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/empleados/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NjA5NjQ5LCJ1c2VybmFtZSI6ImFsZWphbmRybyJ9.naE-sONKHysDbBcVPT-pbOb3KeEdrl3m3Nc6UwjAzCX0_xUtxccY0SyQ-lXfOy2LBztxMr39I5WBMWwbnDQYyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose Juan\",\r\n    \"email\": \"jose@juan.es\",\r\n    \"avatar\": \"https://cdn-icons-png.flaticon.com/512/147/147144.png\",\r\n    \"departamento_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/empleados/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"empleados",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/departamentos/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwIiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNjc3NjA5NjQ5LCJ1c2VybmFtZSI6ImFsZWphbmRybyJ9.naE-sONKHysDbBcVPT-pbOb3KeEdrl3m3Nc6UwjAzCX0_xUtxccY0SyQ-lXfOy2LBztxMr39I5WBMWwbnDQYyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jose Juan\",\r\n    \"email\": \"jose@juan.es\",\r\n    \"avatar\": \"https://cdn-icons-png.flaticon.com/512/147/147144.png\",\r\n    \"departamento_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/departamentos/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"departamentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ruben\",\r\n    \"password\": \"ruben1234\",\r\n    \"role\": \"USER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/list (no autorizado)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJudWxsIiwicm9sZSI6IlVTRVIiLCJleHAiOjE2Nzc2MTAxOTUsInVzZXJuYW1lIjoicnViZW4ifQ.gfgBHd8d5W7sGNTWvUzZoZc0DIpJ8TWyfiBYjPRNP_ioFggd5gJcc6xPcUeNRmqCEWtfotulqCI51D654e91IQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ruben\",\r\n    \"password\": \"ruben1234\",\r\n    \"role\": \"USER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/departamentos/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Marketing y Distribución\",\r\n    \"presupuesto\": 8943.12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/departamentos/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"departamentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/empleados/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Julian\",\r\n    \"email\": \"riberto@correo.com\",\r\n    \"avatar\": \"https://cdn-icons-png.flaticon.com/512/147/147144.png\",\r\n    \"departamento_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/empleados/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"empleados",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/empleados/1 (no autorizado)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Julian\",\r\n    \"email\": \"riberto@correo.com\",\r\n    \"avatar\": \"https://cdn-icons-png.flaticon.com/512/147/147144.png\",\r\n    \"departamento_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/empleados/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"empleados",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:6969/repaso/departamentos/1 (no autorizado)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Julian\",\r\n    \"email\": \"riberto@correo.com\",\r\n    \"avatar\": \"https://cdn-icons-png.flaticon.com/512/147/147144.png\",\r\n    \"departamento_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/repaso/departamentos/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"repaso",
+						"departamentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
