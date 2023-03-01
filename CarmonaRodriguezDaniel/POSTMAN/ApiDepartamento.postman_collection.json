@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "b4b5eacf-5abb-413b-9cfb-5260585e7e39",
+		"name": "ApiDepartamento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25247177"
+	},
+	"item": [
+		{
+			"name": "FindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/departamentos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"departamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/departamentos/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"departamentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindByIdNotFound",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/departamentos/-1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"departamentos",
+						"-1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindByIdBadRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/departamentos/a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"departamentos",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAllEmpleadosById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6969/departamentos/1/empleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"departamentos",
+						"1",
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzY2QwMmE4NS1iMjdjLTQ2YjgtYjUyOS05MDQxODM1MmU2MTkiLCJyb2xlcyI6IltBRE1JTl0iLCJuYW1lIjoiRGFuaWVsIiwiZXhwIjoxNjc3NjU1Mzk3LCJpYXQiOjE2Nzc2NTE3OTcsInVzZXJuYW1lIjoiS2Fzc2l1czEwIn0.Nx03A-zzQfENlYbFSbmgI7cfa5scxoeg9kdoen06aKWpecl2wOGVU8IUZerenX0JtqLni83fZ0Plhr7QIYs0Fg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"name\": \"Cocina\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/departamentos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"departamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostValidation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzY2QwMmE4NS1iMjdjLTQ2YjgtYjUyOS05MDQxODM1MmU2MTkiLCJyb2xlcyI6IltBRE1JTl0iLCJuYW1lIjoiRGFuaWVsIiwiZXhwIjoxNjc3NjU1Mzk3LCJpYXQiOjE2Nzc2NTE3OTcsInVzZXJuYW1lIjoiS2Fzc2l1czEwIn0.Nx03A-zzQfENlYbFSbmgI7cfa5scxoeg9kdoen06aKWpecl2wOGVU8IUZerenX0JtqLni83fZ0Plhr7QIYs0Fg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"name\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/departamentos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"departamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzY2QwMmE4NS1iMjdjLTQ2YjgtYjUyOS05MDQxODM1MmU2MTkiLCJyb2xlcyI6IltBRE1JTl0iLCJuYW1lIjoiRGFuaWVsIiwiZXhwIjoxNjc3NjU1Mzk3LCJpYXQiOjE2Nzc2NTE3OTcsInVzZXJuYW1lIjoiS2Fzc2l1czEwIn0.Nx03A-zzQfENlYbFSbmgI7cfa5scxoeg9kdoen06aKWpecl2wOGVU8IUZerenX0JtqLni83fZ0Plhr7QIYs0Fg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prueba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/departamentos/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"departamentos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutNotFound",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzY2QwMmE4NS1iMjdjLTQ2YjgtYjUyOS05MDQxODM1MmU2MTkiLCJyb2xlcyI6IltBRE1JTl0iLCJuYW1lIjoiRGFuaWVsIiwiZXhwIjoxNjc3NjU1Mzk3LCJpYXQiOjE2Nzc2NTE3OTcsInVzZXJuYW1lIjoiS2Fzc2l1czEwIn0.Nx03A-zzQfENlYbFSbmgI7cfa5scxoeg9kdoen06aKWpecl2wOGVU8IUZerenX0JtqLni83fZ0Plhr7QIYs0Fg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prueba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/departamentos/10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"departamentos",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutBadRequest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzY2QwMmE4NS1iMjdjLTQ2YjgtYjUyOS05MDQxODM1MmU2MTkiLCJyb2xlcyI6IltBRE1JTl0iLCJuYW1lIjoiRGFuaWVsIiwiZXhwIjoxNjc3NjU1Mzk3LCJpYXQiOjE2Nzc2NTE3OTcsInVzZXJuYW1lIjoiS2Fzc2l1czEwIn0.Nx03A-zzQfENlYbFSbmgI7cfa5scxoeg9kdoen06aKWpecl2wOGVU8IUZerenX0JtqLni83fZ0Plhr7QIYs0Fg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prueba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/departamentos/a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"departamentos",
+						"a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutValidation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzY2QwMmE4NS1iMjdjLTQ2YjgtYjUyOS05MDQxODM1MmU2MTkiLCJyb2xlcyI6IltBRE1JTl0iLCJuYW1lIjoiRGFuaWVsIiwiZXhwIjoxNjc3NjU1Mzk3LCJpYXQiOjE2Nzc2NTE3OTcsInVzZXJuYW1lIjoiS2Fzc2l1czEwIn0.Nx03A-zzQfENlYbFSbmgI7cfa5scxoeg9kdoen06aKWpecl2wOGVU8IUZerenX0JtqLni83fZ0Plhr7QIYs0Fg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6969/departamentos/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6969",
+					"path": [
+						"departamentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
