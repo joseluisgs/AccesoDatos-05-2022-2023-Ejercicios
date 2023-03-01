@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "112798aa-8cef-4e6b-8979-77af79311929",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/users/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\" : \"admin1234\",\r\n    \"password\" : \"admin1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8085/api/users/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\" : \"admin1234\",\r\n    \"password\" : \"admin1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8085/api/users/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/users/me",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0NDY2YTM4Yi01NmRlLTRiNTEtYWMwZS05N2FlYmNlNGU1NjAiLCJjb3JyZW8iOiJob2xhQGdtYWlsLmNvbSIsInJvbGVzIjoiW1VTRVJdIiwiZXhwIjoxNjc3NjE3OTU0LCJpYXQiOjE2Nzc2MTQzNTQsInVzZXJuYW1lIjoiaG9sYTEyIn0.MXFkrVMq7klK64bk7qMYUALQH1pGphaABycGR4TTs9WLwqiqWwgcbaLUKV5GV6089dBZC6lV9xCBiLtq8r4gaQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"hola@gmail.com\",\r\n    \"usuario\" : \"hola12\",\r\n    \"password\" : \"hola12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8085/api/users/me",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/users/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3YjU3ZDQzMy1mODYzLTQyNzEtODE4Zi1iNTM5ZDhiYjhkZTIiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlcyI6IltBRE1JTiwgIFVTRVJdIiwiZXhwIjoxNjc3NjE4MDExLCJpYXQiOjE2Nzc2MTQ0MTEsInVzZXJuYW1lIjoiYWRtaW4xMjM0In0.japf1gfE3rZo3dHmthCsEAjmIhigTlqm-bQaf9457qgN_7YyX4SlDfVabAwClrEyXKqriwlyANXJ6y5FOEywRg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"hola@gmail.com\",\r\n    \"usuario\" : \"hola12\",\r\n    \"password\" : \"hola12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8085/api/users/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"users",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/empleados/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3YjU3ZDQzMy1mODYzLTQyNzEtODE4Zi1iNTM5ZDhiYjhkZTIiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlcyI6IltBRE1JTiwgIFVTRVJdIiwiZXhwIjoxNjc3NjE4MDExLCJpYXQiOjE2Nzc2MTQ0MTEsInVzZXJuYW1lIjoiYWRtaW4xMjM0In0.japf1gfE3rZo3dHmthCsEAjmIhigTlqm-bQaf9457qgN_7YyX4SlDfVabAwClrEyXKqriwlyANXJ6y5FOEywRg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"hola@gmail.com\",\r\n    \"usuario\" : \"hola12\",\r\n    \"password\" : \"hola12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8085/api/empleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/empleados/id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3YjU3ZDQzMy1mODYzLTQyNzEtODE4Zi1iNTM5ZDhiYjhkZTIiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlcyI6IltBRE1JTiwgIFVTRVJdIiwiZXhwIjoxNjc3NjIxMDg5LCJpYXQiOjE2Nzc2MTc0ODksInVzZXJuYW1lIjoiYWRtaW4xMjM0In0.fr3uuW-nyj0douFLQo-4W3AupsuUfU2vXOfumgOtrHCMgkOGbuPSI7HKSpR2WoAs6SVJyeG2QdgSQoV_zRu7Kg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"hola@gmail.com\",\r\n    \"usuario\" : \"hola12\",\r\n    \"password\" : \"hola12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8085/api/empleados/31fd26ed-6651-49eb-98a7-b2f48284b76a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"empleados",
+						"31fd26ed-6651-49eb-98a7-b2f48284b76a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/empleados",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3YjU3ZDQzMy1mODYzLTQyNzEtODE4Zi1iNTM5ZDhiYjhkZTIiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlcyI6IltBRE1JTiwgIFVTRVJdIiwiZXhwIjoxNjc3NjIxMDg5LCJpYXQiOjE2Nzc2MTc0ODksInVzZXJuYW1lIjoiYWRtaW4xMjM0In0.fr3uuW-nyj0douFLQo-4W3AupsuUfU2vXOfumgOtrHCMgkOGbuPSI7HKSpR2WoAs6SVJyeG2QdgSQoV_zRu7Kg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"31fd26ed-6651-49eb-98a7-b2f48284b76c\",\r\n    \"nombre\": \"Marcos\",\r\n    \"email\": \"marcos@gmail.com\",\r\n    \"avatar\": \"https://upload.wikimedia.org/wikipedia/commons/f/f4/User_Avatar_2.png\",\r\n    \"departamento\": \"d3e5e833-f86c-4c09-b6c5-9e6e24643ccf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8085/api/empleados",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"empleados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/empleados/id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3YjU3ZDQzMy1mODYzLTQyNzEtODE4Zi1iNTM5ZDhiYjhkZTIiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlcyI6IltBRE1JTiwgIFVTRVJdIiwiZXhwIjoxNjc3NjIxMDg5LCJpYXQiOjE2Nzc2MTc0ODksInVzZXJuYW1lIjoiYWRtaW4xMjM0In0.fr3uuW-nyj0douFLQo-4W3AupsuUfU2vXOfumgOtrHCMgkOGbuPSI7HKSpR2WoAs6SVJyeG2QdgSQoV_zRu7Kg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"31fd26ed-6651-49eb-98a7-b2f48284b76c\",\r\n    \"nombre\": \"Mario\",\r\n    \"email\": \"marcos@gmail.com\",\r\n    \"avatar\": \"https://upload.wikimedia.org/wikipedia/commons/f/f4/User_Avatar_2.png\",\r\n    \"departamento\": \"d3e5e833-f86c-4c09-b6c5-9e6e24643ccf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8085/api/empleados/31fd26ed-6651-49eb-98a7-b2f48284b76c",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"empleados",
+						"31fd26ed-6651-49eb-98a7-b2f48284b76c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/empleados/id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3YjU3ZDQzMy1mODYzLTQyNzEtODE4Zi1iNTM5ZDhiYjhkZTIiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlcyI6IltBRE1JTiwgIFVTRVJdIiwiZXhwIjoxNjc3NjIxMDg5LCJpYXQiOjE2Nzc2MTc0ODksInVzZXJuYW1lIjoiYWRtaW4xMjM0In0.fr3uuW-nyj0douFLQo-4W3AupsuUfU2vXOfumgOtrHCMgkOGbuPSI7HKSpR2WoAs6SVJyeG2QdgSQoV_zRu7Kg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"31fd26ed-6651-49eb-98a7-b2f48284b76c\",\r\n    \"nombre\": \"Mario\",\r\n    \"email\": \"marcos@gmail.com\",\r\n    \"avatar\": \"https://upload.wikimedia.org/wikipedia/commons/f/f4/User_Avatar_2.png\",\r\n    \"departamento\": \"d3e5e833-f86c-4c09-b6c5-9e6e24643ccf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8085/api/empleados/31fd26ed-6651-49eb-98a7-b2f48284b76c",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"empleados",
+						"31fd26ed-6651-49eb-98a7-b2f48284b76c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/departamento/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3YjU3ZDQzMy1mODYzLTQyNzEtODE4Zi1iNTM5ZDhiYjhkZTIiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlcyI6IltBRE1JTiwgIFVTRVJdIiwiZXhwIjoxNjc3NjE4MDExLCJpYXQiOjE2Nzc2MTQ0MTEsInVzZXJuYW1lIjoiYWRtaW4xMjM0In0.japf1gfE3rZo3dHmthCsEAjmIhigTlqm-bQaf9457qgN_7YyX4SlDfVabAwClrEyXKqriwlyANXJ6y5FOEywRg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"hola@gmail.com\",\r\n    \"usuario\" : \"hola12\",\r\n    \"password\" : \"hola12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8085/api/departamento",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"departamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/departamento/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3YjU3ZDQzMy1mODYzLTQyNzEtODE4Zi1iNTM5ZDhiYjhkZTIiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlcyI6IltBRE1JTiwgIFVTRVJdIiwiZXhwIjoxNjc3NjIxNjg2LCJpYXQiOjE2Nzc2MTgwODYsInVzZXJuYW1lIjoiYWRtaW4xMjM0In0.Z0Gv60mdjqbaKv6ue7x5Xn-TcvmVluOqu3rBw4UNBE85Kkw-9DCnSNfhbXn0Cx2aqJGlfvij-FICEjrw9uyoXg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"d3e5e733-f86c-4c09-b6c5-9e6e24643ccf\",\r\n        \"nombre\": \"Informatica2\",\r\n        \"presupuesto\": 122.0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8085/api/departamento",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"departamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/departamento/id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3YjU3ZDQzMy1mODYzLTQyNzEtODE4Zi1iNTM5ZDhiYjhkZTIiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlcyI6IltBRE1JTiwgIFVTRVJdIiwiZXhwIjoxNjc3NjIxNjg2LCJpYXQiOjE2Nzc2MTgwODYsInVzZXJuYW1lIjoiYWRtaW4xMjM0In0.Z0Gv60mdjqbaKv6ue7x5Xn-TcvmVluOqu3rBw4UNBE85Kkw-9DCnSNfhbXn0Cx2aqJGlfvij-FICEjrw9uyoXg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"d3e5e733-f86c-4c09-b6c5-9e6e24643ccf\",\r\n        \"nombre\": \"Informatica2\",\r\n        \"presupuesto\": 122.0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8085/api/departamento/d3e5e733-f86c-4c09-b6c5-9e6e24643ccf",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"departamento",
+						"d3e5e733-f86c-4c09-b6c5-9e6e24643ccf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/departamento/id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI3YjU3ZDQzMy1mODYzLTQyNzEtODE4Zi1iNTM5ZDhiYjhkZTIiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlcyI6IltBRE1JTiwgIFVTRVJdIiwiZXhwIjoxNjc3NjIxNjg2LCJpYXQiOjE2Nzc2MTgwODYsInVzZXJuYW1lIjoiYWRtaW4xMjM0In0.Z0Gv60mdjqbaKv6ue7x5Xn-TcvmVluOqu3rBw4UNBE85Kkw-9DCnSNfhbXn0Cx2aqJGlfvij-FICEjrw9uyoXg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8085/api/departamento/d3e5e733-f86c-4c09-b6c5-9e6e24643ccf",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"departamento",
+						"d3e5e733-f86c-4c09-b6c5-9e6e24643ccf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
